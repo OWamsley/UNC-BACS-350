@@ -81,36 +81,8 @@
         </div>
     </nav>
 
-    <main role="main">
-        <!-- The video -->
-        <video autoplay muted loop id="myVideo" style="position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;">
-            <source src="yoyo.mp4" type="video/mp4">
-        </video>
-        <div class="content" style="position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;">
-            <h1>Hawkeye</h1>
-            <p>Hawkeye is the coolest of the avengers. Also, his costume in the comics is way cooler than the one he sports in the movies. </p>
-
-        </div>
-    </main>
-
-    <footer class="container">
-        <p>&copy; Owen Wamsley</p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')
-
-    </script>
-    <script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+    
 </body>
-
+{% block content %}
+{% endblock content %}
 </html>

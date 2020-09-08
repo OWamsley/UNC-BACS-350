@@ -1,5 +1,24 @@
 <!-- templates/home.html -->
-<h1>Homepage</h1>
-<body>
-<a href="{% url 'about' %}">About this developer!</a>
-</body>
+{% extends 'base.html' %}
+
+{% block content %}
+<main role="main">
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <div style="margin-bottom: 1; !important;
+                    padding-bottom: 10px; !important" class="jumbotron">
+                <div class="container">
+                    <h1 class="display-3">This is my site!</h1>
+                    
+                </div>
+                
+                
+
+
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
