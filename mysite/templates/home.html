@@ -1,5 +1,8 @@
 <!-- templates/home.html -->
+
 {% extends 'base.html' %}
+
+{% load static %}
 
 {% block content %}
 <main role="main">
@@ -11,6 +14,8 @@
                     padding-bottom: 10px; !important" class="jumbotron">
                 <div class="container">
                     <h1 class="display-3">HomePage</h1>
+                    
+                    <img src="{% static 'hawkeye' %}" class="img-fluid" alt="Responsive image">
                     
                 </div>
                 
