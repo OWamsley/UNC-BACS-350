@@ -32,6 +32,8 @@ class HawkeyeView(TemplateView):
         return{
             'title': 'Hawkeye',
             'info': 'Hawkeye is Clint Barton, and he is a master marksman. He is cooler in the comics than he is in the movies.',
+            'otherHero': 'Rorschach',
+            'otherHeroUrl': 'rorschach',
         }
 class RorschachView(TemplateView):
     template_name="page.html"
@@ -39,4 +41,6 @@ class RorschachView(TemplateView):
         return{
             'title': 'Rorschach',
             'info': 'Rorschach is an anti-hero from Watchmen, a deconstruction of the idea of superheroes. Rorschach is a vigilante that believes in black and white good and evil.',
+            'otherHero': 'Hawkeye',
+            'otherHeroUrl': 'hawkeye',
         }
