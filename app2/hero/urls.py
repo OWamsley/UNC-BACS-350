@@ -9,5 +9,8 @@ urlpatterns = [
     path('profile/', ProfileView.as_view()),
     path('hawkeye/', HawkeyeView.as_view()),
     path('rorschach/', RorschachView.as_view()),
+    path('/bacs200/inspire.html', InspireView.as_view()),
+    path('/bacs200/amuse.html', AmuseView.as_view()),
+    path('/bacs200/educate.html', EducateView.as_view()),
 
 ]
