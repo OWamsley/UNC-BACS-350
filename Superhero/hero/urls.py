@@ -4,8 +4,9 @@ from .views import *
 
 
 urlpatterns = [
-    #path('<str:template>', PageView.as_view()),
+    path('<str:template>', PageView.as_view()),
     path('', IndexView.as_view()),
-    path('hero/<str:hero>', HeroView.as_view()),
-    
+    path('hero/<str:hero>/', HeroView.as_view()),
+    path('home', IndexView.as_view()),
+
 ]
