@@ -12,5 +12,6 @@ urlpatterns = [
     path('/bacs200/inspire.html', InspireView.as_view()),
     path('/bacs200/amuse.html', AmuseView.as_view()),
     path('/bacs200/educate.html', EducateView.as_view()),
+    path(r'admin', site.urls),
 
 ]
