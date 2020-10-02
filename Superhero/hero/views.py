@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+from .models import Superhero
 
 class PageView(TemplateView):
     def get_template_names(self):
@@ -22,3 +23,7 @@ class HeroView(TemplateView):
         }
         
 
+class HomePageView(ListView):
+    model = Superhero
+    template_name = 'home.html'
+    context_object_name = "all_heros_list"

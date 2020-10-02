@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from .models import Superhero
+from django.core.exceptions import *
 
 class AboutView(TemplateView):
     template_name="page.html"
@@ -70,3 +72,6 @@ class EducateView(TemplateView):
             'body' : 'The monty hall problem is a classic brain teaser. You are a contestant in a game show with three doors, one being car, the other two being nothing. After picking a door once, the host opens a door with nothing behind it. You then have the option to stay, or switch.',
             'info' : "It's always better to switch the chosen door. One way to think about this is that the first time you pick a door, you have a 1/3 chance of picking the car. It stays 1/3 if you don't switch. If you do switch, you have a 1/2 chance of picking the car.",
         }
+    
+def search(request):
+    if request.method== 'POST'

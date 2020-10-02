@@ -18,4 +18,15 @@
         <a href="hero/Batman">Batman Profile</a>
     </li>
 </ul>
+
+<ul>
+    {% for superhero in all_heros_list %}
+    <li><a href="hero/{{ superhero }}">{{ superhero }} Profile</a></li>
+    {% endfor %}
+</ul>
+
+<h1>Enter a superhero to see their real name</h1>
+
+
+
 {% endblock content %}
