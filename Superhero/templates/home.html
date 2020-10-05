@@ -1,23 +1,7 @@
 {% extends 'superhero_theme.html' %}
 
 {% block content %}
-<ul>
-    <li>
-        <a href="hero/Hawkeye">Hawkeye Profile</a>
-    </li>
-    <li>
-        <a href="hero/Rorschach">Rorschach Profile</a>
-    </li>
-    <li>
-        <a href="hero/Moonknight">Moon Knight Profile</a>
-    </li>
-    <li>
-        <a href="hero/Ironman">Iron Man Profile</a>
-    </li>
-    <li>
-        <a href="hero/Batman">Batman Profile</a>
-    </li>
-</ul>
+
 
 <ul>
     {% for superhero in all_heros_list %}
@@ -25,8 +9,11 @@
     {% endfor %}
 </ul>
 
-<h1>Enter a superhero to see their real name</h1>
+<h2>Enter a superhero to see their real name</h2>
 
-
+<form>
+    <p>Superhero: <input type="text" name="identity"></p>
+    <p><input type="submit" value="Submit"></p>
+</form>
 
 {% endblock content %}
