@@ -1,6 +1,6 @@
 from .models import Superhero
 
-def add_hero(hero_name, hero_id):
+def add_hero(hero_name, hero_id, hero_info):
     return Superhero.objects.create(name = hero_name, identity =hero_id)
 
 def list_heroes():

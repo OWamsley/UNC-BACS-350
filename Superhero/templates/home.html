@@ -2,18 +2,14 @@
 
 {% block content %}
 
+<h3><a href="detail/" > Superhero Detail View</a></h3>
 
 <ul>
     {% for superhero in all_heros_list %}
-    <li><a href="hero/{{ superhero }}">{{ superhero }} Profile</a></li>
+    <li><a href="hero/{{ superhero }}">{{ superhero }} Profile</a>
+        <img src="/static/images/{{ superhero }}.jpg" alt="{{ superhero }}" height="200px">
+    </li>
     {% endfor %}
 </ul>
-
-<h2>Enter a superhero to see their real name</h2>
-
-<form>
-    <p>Superhero: <input type="text" name="identity"></p>
-    <p><input type="submit" value="Submit"></p>
-</form>
 
 {% endblock content %}

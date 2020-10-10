@@ -1,0 +1,23 @@
+{% extends 'superhero_theme.html' %}
+
+{% block content %}
+
+
+<table>
+    <tbody>
+        {% for superhero in all_heros_list %}
+        <tr>
+            <td><a href="hero/{{ superhero }}">{{ superhero }} Profile </a></td>
+            <td>Name: {{ superhero.name }} </td>
+            <td>Identity: {{ superhero.identity }} </td>
+            <td><a target="/static/images/{{ superhero.image }}" href="/static/images/{{ superhero.image }}" height="200px">
+                    <img height="200px" src="/static/images/{{ superhero.image }}" alt="{{ superhero }}">
+                </a></td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock content %}
