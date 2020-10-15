@@ -9,6 +9,5 @@ urlpatterns = [
     path('hero/<str:hero>/', HeroView.as_view()),
     path('home/', HomePageView.as_view()),
     path('detail/', DetailView.as_view()),
-    path('<str:identity>', DetailView.as_view, name="hero_detail"),
-    path('<int:pk>', addHeroView.as_view(), name='hero_add'),
+    path('addhero/', HeroEditView.as_view()),
 ]

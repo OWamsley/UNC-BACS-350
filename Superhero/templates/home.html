@@ -2,14 +2,22 @@
 
 {% block content %}
 
-<h3><a href="detail/" > Superhero Detail View</a></h3>
+<div class="container-fluid">
+    <p class="text-center"><a href="/detail/" > Superhero Detail View</a></p>
+<p class="text-center"><a href="/addhero/"> Add a Hero!</a></p>
+</div>
 
-<ul>
+<div class="container-fluid">
+<table class="table table-borderless">
+    <tbody>
+    
     {% for superhero in all_heros_list %}
-    <li><a href="hero/{{ superhero }}">{{ superhero }} Profile</a>
-        <img src="/static/images/{{ superhero }}.jpg" alt="{{ superhero }}" height="200px">
-    </li>
+        <tr>
+            <td><a href="hero/{{ superhero }}">{{ superhero }} Profile</a></td>
+            <td> <img src="/static/images/{{ superhero }}.jpg" alt="{{ superhero }}" height="200px"></td>
+    </tr>
     {% endfor %}
-</ul>
-
+    </tbody>
+</table>
+</div>
 {% endblock content %}

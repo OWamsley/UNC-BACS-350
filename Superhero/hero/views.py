@@ -42,3 +42,8 @@ class addHeroView(CreateView):
     template_name = "create.html"
     context_object_name = "all_heros_list"
     fields = '__all__'
+    
+class HeroEditView(CreateView):
+    template_name = "hero_edit.html"
+    model = Superhero
+    fields = '__all__'
