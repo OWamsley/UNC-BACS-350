@@ -3,21 +3,25 @@
 {% block content %}
 
 <div class="container-fluid">
-    <p class="text-center"><a href="/detail/" > Superhero Detail View</a></p>
-<p class="text-center"><a href="/addhero/"> Add a Hero!</a></p>
+    <p class="text-center"><a href="/detail/"> Superhero Detail View</a></p>
+    <p class="text-center"><a href="/addhero/"> Add a Hero!</a></p>
 </div>
 
 <div class="container-fluid">
-<table class="table table-borderless">
-    <tbody>
-    
-    {% for superhero in all_heros_list %}
-        <tr>
-            <td><a href="hero/{{ superhero }}">{{ superhero }} Profile</a></td>
-            <td> <img src="/static/images/{{ superhero }}.jpg" alt="{{ superhero }}" height="200px"></td>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>
+    <table class="table table-borderless">
+        <tbody>
+
+            {% for superhero in all_heros_list %}
+            <tr>
+                <td>
+                    <h3>
+                    <a href="hero/{{ superhero }}">{{ superhero }} Profile</a>
+                    </h3>
+                </td>
+                <td> <img src="/static/images/{{ superhero }}.jpg" alt="{{ superhero }}" height="200px"></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 {% endblock content %}
