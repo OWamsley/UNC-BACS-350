@@ -1,6 +1,7 @@
 {% extends 'superhero_theme.html' %}
 
 {% block content %}
-    <h2>{{ hero }}</h2>
-    <img src="{{ hero.image }}" alt="{{ hero }}">
+<h2>{{ hero }}</h2>
+<img src="/images/{{ hero }}.jpg" alt="{{ hero }}">
+
 {% endblock content %}

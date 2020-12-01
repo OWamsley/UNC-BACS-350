@@ -1,0 +1,10 @@
+{% extends 'superhero_theme.html' %}
+
+{% block main %}
+
+<h1> Delete Post</h1>
+
+<form action="" method="Superhero">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ Superhero.identity }}"?</p>
+    <input type="submit" value="Confirm">
+</form>
