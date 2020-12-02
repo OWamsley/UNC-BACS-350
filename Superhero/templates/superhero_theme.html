@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>SuperHeros</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
+<link rel="stylesheet" type="text/css" href="custom.css">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a class="navbar-brand" href="/">Superhero News</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/addhero/">Add a Hero</a>
+            </li>
+
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                {% if user.is_authenticated %}
+                <span class="navbar-text">
+                    Hi {{ user.username }}!</span>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'logout' %}">Log Out</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <span class="navbar-text">
+                    You are not logged in
+                </span>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'login' %}">Log In</a>
+                {% endif %}
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="custom.css">
 </head>
 
 <body>
     <div class="container">
-        <h1 class="text-center">SuperHero News</h1>
-        <h3 class='text-center'><a href="/">Go Home</a></h3>
-        <h3 class='text-center'>{% if user.is_authenticated %}
-            Hi {{ user.username }}!
-            <p><a href="{% url 'logout' %}">Log Out</a></p>
-            {% else %}
-            <p>You are not logged in</p>
-            <a href="{% url 'login' %}">Log In</a>
-            {% endif %}</h3>
-        <br>
-        <br>
+
         {% block content %}
         <h2>No block defined</h2>
         {% endblock content %}
     </div>
 </body>
+<footer class="footer">
+    <div class="container text-center">
+        <br>
+        <span class="text-muted">Owen Wamsley BACS350</span>
+        <br>
+    </div>
+</footer>
 
 </html>
