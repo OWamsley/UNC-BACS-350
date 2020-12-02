@@ -19,9 +19,15 @@ class IndexView(TemplateView):
     
     
 class HeroView(ListView):
-    template_name = "hero.html"
+    def get_template_names(self):
+        template_name = 'hero.html'
+        return template_name
+    def get_context_data(self, **kwargs):
+        return{
+            'hero': self.kwargs.get('hero')
+        }
     model = Superhero
-        
+    context_object_name = "all_heros_list"
 
 class HomePageView(ListView):
     model = Superhero
